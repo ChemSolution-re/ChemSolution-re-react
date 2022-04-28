@@ -1,6 +1,8 @@
+import classes from './Footer.module.css';
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className={classes.footer}>
       <div className="flex flex-row bg-csblue px-48 py-6 place-content-between">
         <div className="text-2xl self-center">
           <p className="text-center items-center self-center">
@@ -44,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,15 +1,33 @@
-import { Fragment } from "react";
+import { NavLink } from 'react-router-dom';
 
-import classes from "./Layout.module.css";
-import MainNavigation from "./MainNavigation";
+import classes from './MainNavigation.module.css';
 
-const Layout = (props) => {
+const MainNavigation = () => {
   return (
-    <Fragment>
-      <MainNavigation />
-      <main className={classes.main}>{props.children}</main>
-    </Fragment>
+    <header className={classes.header}>
+      <div className={classes.logo}>ChemSolution</div>
+      <nav className={classes.nav}>
+        <ul>
+          <li>
+            <NavLink
+              to="/home"
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/"
+              className={(navData) => (navData.isActive ? classes.active : '')}
+            >
+              Dummy link
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
-export default Layout;
+export default MainNavigation;
