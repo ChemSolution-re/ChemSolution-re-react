@@ -1,8 +1,12 @@
-import classes from './Footer.module.css';
+const footerStyles = {
+  position: 'absolute',
+  bottom: '0',
+  width: '100%',
+};
 
 const Footer = () => {
   return (
-    <footer className={classes.footer}>
+    <footer style={footerStyles}>
       <div className="flex flex-row bg-csblue px-48 py-6 place-content-between">
         <div className="text-2xl self-center">
           <p className="text-center items-center self-center">

@@ -4,9 +4,11 @@ import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
   return (
-    <header className={classes.header}>
-      <div className={classes.logo}>ChemSolution</div>
-      <nav className={classes.nav}>
+    <header>
+      <nav className="top-0 z-20 lg:h-auto sm:h-1/6 flex items-center justify-between flex-grow bg-csblack p-5 m-auto shadow-2xl fixed w-full">
+        <div className="transform md:scale-50 lg:scale-100 flex items-center flex-shrink text-white ml-3 mr-6">
+          ChemSolution
+        </div>
         <ul>
           <li>
             <NavLink
