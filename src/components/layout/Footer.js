@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-row bg-csblue px-48 py-6 place-content-between">
         <div className="text-2xl self-center">
           <p className="text-center items-center self-center">
-            Ви можете нас знайти в соціальних мережах!
+            Ви можете нас знайти у соціальних мережах!
           </p>
         </div>
         <div className="text-7xl">
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-row-reverse text-xl">
             <i className="fas fa-envelope-open-text self-center m-3"></i>
-            <p className="self-center">chemsolution2021@gmail.com</p>
+            <p className="self-center">chemsolution2022@gmail.com</p>
           </div>
           <div className="flex flex-row-reverse text-xl">
             <i className="fas fa-phone self-center m-3"></i>

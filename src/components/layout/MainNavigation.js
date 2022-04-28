@@ -1,6 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 
-import classes from './MainNavigation.module.css';
+const commonLinkClass =
+  'focus:outline-none block mt-4 lg:inline-block lg:mt-0 hover:text-cslightgreen mr-8 cursor-pointer transform duration-300 ease-in-out hover:scale-125 hover:animate-pulse';
+
+const linkClassHandler = (navData) => {
+  if (navData.isActive) {
+    return classNames('text-csgreen animate-pulse', commonLinkClass);
+  }
+  return classNames('text-white', commonLinkClass);
+};
 
 const MainNavigation = () => {
   return (
@@ -9,24 +18,19 @@ const MainNavigation = () => {
         <div className="transform md:scale-50 lg:scale-100 flex items-center flex-shrink text-white ml-3 mr-6">
           ChemSolution
         </div>
-        <ul>
-          <li>
-            <NavLink
-              to="/home"
-              className={(navData) => (navData.isActive ? classes.active : '')}
-            >
-              Home
+        <div className="lg:text-lg sm:text-sm lg:flex-grow flex justify-start">
+          <div className="flex flex-grow">
+            <NavLink to="/home" className={linkClassHandler}>
+              Головна
             </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/"
-              className={(navData) => (navData.isActive ? classes.active : '')}
-            >
-              Dummy link
+            <NavLink to="/lab" className={linkClassHandler}>
+              Лабораторія
             </NavLink>
-          </li>
-        </ul>
+            <NavLink to="/table" className={linkClassHandler}>
+              Періодична таблиця
+            </NavLink>
+          </div>
+        </div>
       </nav>
     </header>
   );
